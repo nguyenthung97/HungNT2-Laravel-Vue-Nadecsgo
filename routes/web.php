@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Auth\LoginController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\MapsController;
@@ -69,3 +70,5 @@ Route::post('/add-comment',[CommentController::class,'addComment']);
 Route::get('/users/{steamID}',[UsersController::class,'index']);
 
 Route::get('/users/{steamID}/{mapID}',[VideosController::class,'getVideosBySteamIDAndMapID']);
+
+Route::post('logout', [LoginController::class,'logout']);

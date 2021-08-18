@@ -31,8 +31,9 @@
             <ul class="dropdown-menu dropdown-menu-right">
               <li><a class="dropdown-item" href="../createnade">Add Nades</a></li>
               <li><a class="dropdown-item" href="../users/{{Auth::user()->steam_id}}">Profile</a></li>
-              <li><a class="dropdown-item" href="{{Auth::logout()}}">Sign out</a></li>
+              <li><a class="dropdown-item" href="{{ url('/logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();"> Sign Out </a></li>
             </ul>
+            <form id="logout-form" action="{{ url('/logout') }}" method="POST" style="display: none;">{{ csrf_field() }} </form>
           </div>
         </div>
       </div>
