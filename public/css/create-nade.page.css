@@ -1,0 +1,291 @@
+
+    h2,
+    h3 {
+        padding: 0px;
+        margin: 0 0 16px;
+    }
+
+    h2 {
+        font-size: 24px;
+    }
+
+    h3 {
+        font-size: 22px;
+    }
+
+    .rules {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: min-content 1fr;
+        gap: 16px;
+        grid-template-areas:
+            "req videoreq"
+            "req ssreq"
+    }
+
+    .req,
+    .screenshot-req,
+    .video-req {
+        padding: 16px;
+        border-radius: 5px;
+        background: #fafafa;
+        border: 1px solid rgba(0, 0, 0, 0.1);
+    }
+
+    p {
+        font-size: 16px;
+        margin-bottom: 6px;
+    }
+
+    b {
+        font-weight: 700;
+    }
+
+    .req {
+        grid-area: req;
+    }
+
+    .screenshot-req {
+        grid-area: ssreq;
+    }
+
+    .video-req {
+        grid-area: videoreq;
+    }
+
+    #page {
+        display: grid;
+        width: 100%;
+        min-height: 100vh;
+        grid-template-columns: 190px 1fr;
+        grid-template-rows: 55px 1fr 1fr 345px;
+        grid-gap: 16px;
+        grid-template-areas:
+            "header header"
+            "nav main"
+            "nav main"
+            "nav main"
+    }
+
+    .screenshottable td {
+        padding: 0 5px 5px 0;
+        font-weight: 400;
+    }
+
+    #page-wrap {
+        margin: 32px 16px 16px 16px;
+    }
+
+    #create-nade-page{
+        border-radius: 5px;
+        background: #fafafa;
+        border: 1px solid rgba(0, 0, 0, 0.1);
+        position: relative;
+        display: grid;
+        grid-gap: 10px 16px;
+        padding: 16px;
+        grid-template-columns: 1fr 300px;
+        grid-template-areas: 
+        "info-label image-label"
+        "map-select resultimg-select"
+        "overview-pos lineupimg-select"
+        "type-select mtdt-label"
+        "videourl-select team-select"
+        "nadeend mvmt"
+        "thrownfrom technique"
+        ". tick"
+        ". oneway"
+        "desc previewlabel"
+        "desc preview"
+        "desc preview"
+        ". submit";
+    }
+
+    .label{
+        font-size: 13px;
+        font-weight: 700;
+        margin-bottom: 5px;
+        text-transform: uppercase;
+        color: rgb(66, 66, 66);
+    }
+
+    select{
+        width: 100%;
+        border-radius: 3px;
+        padding: 10px;
+        font-size: 15px;
+        line-height: 11px;
+        border: 1px solid rgba(0, 0, 0, 0.1);
+        color: black;
+        outline-color: rgba(0,0,255,0.3);
+    }
+
+    button{
+        background: #545b69;
+        width: 100%;
+        border-radius: 3px;
+        padding: 13px;
+        font-size: 15px;
+        line-height: 11px;
+        border: 1px solid rgba(0, 0, 0, 0.1);
+        color: white;
+        text-align: center;
+        cursor: pointer;
+    }
+
+    input[type="text"]{
+        width:100%;
+        line-height: 15px;
+        padding: 10px;
+        border: 1px solid rgba(0, 0, 0, 0.1);
+        outline-color: rgba(0,0,255,0.3);
+    }
+
+    textarea{
+        background: #fff;
+    border-radius: 5px;
+    border: 1px solid rgba(0,0,0,0.15);
+    color: #424242;
+    min-height: 200px;
+    outline-color: rgba(0,0,255,0.3);
+    padding: 15px;
+    resize: none;
+    }
+
+
+    #image-adder ,#lineup-adder{
+        inset:0;
+        z-index: 1000;
+        position: fixed;
+        overflow-y: auto;
+        background: rgba(0,0,0,0.9);
+    }
+
+    .file-selector-btn{
+        margin-bottom: 12px;
+        display: flex;
+    }   
+
+    .btn-cancel{
+        background: rgb(192,28,28);
+        color:white;
+        opacity: 0.8;
+        border: none;
+        outline: none;
+        font-size: 14px;
+        cursor: pointer;
+        margin-right: 16px;
+        border-radius: 5px;
+        height: 42px;
+        padding: 0px 10px;
+        width: 80px;
+    }
+
+    .btn-select-img{
+        border: none;
+        outline:none;
+        font-size: 14px;
+        background: rgb(84, 91, 105);
+        cursor: pointer;
+        margin-right: 16px;
+        color: white;
+        border-radius: 5px;
+        height: 42px;
+        padding: 0px 10px;
+        width: 120px;
+    }
+
+    .btn-save{
+        border: none;
+        outline:none;
+        font-size: 14px;
+        background: rgb(148, 184, 59);
+        cursor: pointer;
+        margin-right: 16px;
+        color: white;
+        border-radius: 5px;
+        height: 42px;
+        padding: 0px 10px;
+        width: 80px;
+    }
+
+
+    .image-uploader{
+        padding-top: 16px;
+        padding-bottom: 16px;
+        display: block;
+        width: 1264.81px;
+        margin: 0px auto;
+    }
+
+    #place-holder{
+        position: relative;
+        width: 100%;
+        padding-bottom: 56.25%;
+        background: rgba(255, 255, 255, 0.5);
+        margin-top: 20px;
+        border-radius: 5px;
+    }
+
+    .message{
+        position: absolute;
+        inset:0;
+        display: flex;
+        align-items:center;
+        justify-content: center;
+    }
+
+    .line-up-message{
+        background: rgba(255, 255, 255, 0.8);
+        color: rgb(17, 17, 17);
+        border-radius: 5px;
+        margin-bottom: 15px;
+        padding: 10px;
+    }
+
+    ul{
+        display: block;
+        list-style-type: disc;
+        margin-block-start: 1em;
+        margin-block-end: 1em;
+        margin-inline-start: 0px;
+        margin-inline-end: 0px;
+        padding-inline-start: 40px;
+    }
+
+    .nade-container{
+        background:#fff;
+        border: 1px solid rgba(0,0,0,0.1);
+        border-radius: 5px;
+        overflow:hidden;
+    }
+
+    .position-modal{
+        inset: 0px;
+        position: fixed;
+        z-index:999;
+        background: rgba(0,0,0,0.9);
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+    }
+
+    .position-modal-content{
+        background: white;
+        border-radius:4px;
+    }
+
+    .modal-title{
+        padding: 12px;
+        font-size: 1.3em;
+        text-align: center;
+    }
+
+    .point{
+        position: absolute;
+        border-radius: 50%;
+        background: rgb(189, 235, 52);
+        border: 1px solid black;
+        width: 10px;
+        height: 10px;
+    }

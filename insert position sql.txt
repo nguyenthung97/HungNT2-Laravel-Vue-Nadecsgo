@@ -1,0 +1,232 @@
+
+/* INSERT QUERY NO: 1 */
+INSERT INTO positions(map_id, PosName, bomb_id, Counter, posTop, posLeft)
+VALUES
+(
+2, 'Coffins', 1, 5, 47, 231
+);
+
+/* INSERT QUERY NO: 2 */
+INSERT INTO positions(map_id, PosName, bomb_id, Counter, posTop, posLeft)
+VALUES
+(
+2, 'Coffins one-way', 1, 0, 83, 239
+);
+
+/* INSERT QUERY NO: 3 */
+INSERT INTO positions(map_id, PosName, bomb_id, Counter, posTop, posLeft)
+VALUES
+(
+2, 'B-site', 1, 0, 102, 239
+);
+
+/* INSERT QUERY NO: 4 */
+INSERT INTO positions(map_id, PosName, bomb_id, Counter, posTop, posLeft)
+VALUES
+(
+2, 'B-site one way', 1, 0, 120, 239
+);
+
+/* INSERT QUERY NO: 5 */
+INSERT INTO positions(map_id, PosName, bomb_id, Counter, posTop, posLeft)
+VALUES
+(
+2, 'B-Entrance', 1, 2, 144, 260
+);
+
+/* INSERT QUERY NO: 6 */
+INSERT INTO positions(map_id, PosName, bomb_id, Counter, posTop, posLeft)
+VALUES
+(
+2, 'CT', 1, 10, 105, 280
+);
+
+/* INSERT QUERY NO: 7 */
+INSERT INTO positions(map_id, PosName, bomb_id, Counter, posTop, posLeft)
+VALUES
+(
+2, 'Church Entry one way', 1, 0, 75, 299
+);
+
+/* INSERT QUERY NO: 8 */
+INSERT INTO positions(map_id, PosName, bomb_id, Counter, posTop, posLeft)
+VALUES
+(
+2, 'CT Deep', 1, 2, 90, 345
+);
+
+/* INSERT QUERY NO: 9 */
+INSERT INTO positions(map_id, PosName, bomb_id, Counter, posTop, posLeft)
+VALUES
+(
+2, 'Top Banana', 1, 0, 160, 245
+);
+
+/* INSERT QUERY NO: 10 */
+INSERT INTO positions(map_id, PosName, bomb_id, Counter, posTop, posLeft)
+VALUES
+(
+2, 'Banana Car', 1, 4, 170, 223
+);
+
+/* INSERT QUERY NO: 11 */
+INSERT INTO positions(map_id, PosName, bomb_id, Counter, posTop, posLeft)
+VALUES
+(
+2, 'Bottom Banana', 1, 0, 228, 199
+);
+
+/* INSERT QUERY NO: 12 */
+INSERT INTO positions(map_id, PosName, bomb_id, Counter, posTop, posLeft)
+VALUES
+(
+2, 'T Ramp', 1, 4, 280, 187
+);
+
+/* INSERT QUERY NO: 13 */
+INSERT INTO positions(map_id, PosName, bomb_id, Counter, posTop, posLeft)
+VALUES
+(
+2, 'Underpass one-way', 1, 0, 298, 218
+);
+
+/* INSERT QUERY NO: 14 */
+INSERT INTO positions(map_id, PosName, bomb_id, Counter, posTop, posLeft)
+VALUES
+(
+2, 'Mid ', 1, 2, 314, 248
+);
+
+/* INSERT QUERY NO: 15 */
+INSERT INTO positions(map_id, PosName, bomb_id, Counter, posTop, posLeft)
+VALUES
+(
+2, 'Boiler-Aps', 1, 0, 385, 530
+);
+
+/* INSERT QUERY NO: 16 */
+INSERT INTO positions(map_id, PosName, bomb_id, Counter, posTop, posLeft)
+VALUES
+(
+2, 'Top Mid', 1, 8, 316, 302
+);
+
+/* INSERT QUERY NO: 17 */
+INSERT INTO positions(map_id, PosName, bomb_id, Counter, posTop, posLeft)
+VALUES
+(
+2, 'Short', 1, 6, 336, 323
+);
+
+/* INSERT QUERY NO: 18 */
+INSERT INTO positions(map_id, PosName, bomb_id, Counter, posTop, posLeft)
+VALUES
+(
+2, 'Mid-Arch', 1, 10, 277, 322
+);
+
+/* INSERT QUERY NO: 19 */
+INSERT INTO positions(map_id, PosName, bomb_id, Counter, posTop, posLeft)
+VALUES
+(
+2, 'Connector', 1, 4, 240, 360
+);
+
+/* INSERT QUERY NO: 20 */
+INSERT INTO positions(map_id, PosName, bomb_id, Counter, posTop, posLeft)
+VALUES
+(
+2, 'Arch-Library', 1, 6, 256, 382
+);
+
+/* INSERT QUERY NO: 21 */
+INSERT INTO positions(map_id, PosName, bomb_id, Counter, posTop, posLeft)
+VALUES
+(
+2, 'Library', 1, 2, 255, 417
+);
+
+/* INSERT QUERY NO: 22 */
+INSERT INTO positions(map_id, PosName, bomb_id, Counter, posTop, posLeft)
+VALUES
+(
+2, 'Motor', 1, 7, 281, 404
+);
+
+/* INSERT QUERY NO: 23 */
+INSERT INTO positions(map_id, PosName, bomb_id, Counter, posTop, posLeft)
+VALUES
+(
+2, 'A-Site one-way', 1, 0, 314, 363
+);
+
+/* INSERT QUERY NO: 24 */
+INSERT INTO positions(map_id, PosName, bomb_id, Counter, posTop, posLeft)
+VALUES
+(
+2, 'Short-Minipit', 1, 3, 341, 382
+);
+
+/* INSERT QUERY NO: 25 */
+INSERT INTO positions(map_id, PosName, bomb_id, Counter, posTop, posLeft)
+VALUES
+(
+2, 'Minipit', 1, 2, 361, 380
+);
+
+/* INSERT QUERY NO: 26 */
+INSERT INTO positions(map_id, PosName, bomb_id, Counter, posTop, posLeft)
+VALUES
+(
+2, 'Balcony', 1, 3, 382, 387
+);
+
+/* INSERT QUERY NO: 27 */
+INSERT INTO positions(map_id, PosName, bomb_id, Counter, posTop, posLeft)
+VALUES
+(
+2, 'Pit', 1, 5, 371, 420
+);
+
+/* INSERT QUERY NO: 28 */
+INSERT INTO positions(map_id, PosName, bomb_id, Counter, posTop, posLeft)
+VALUES
+(
+2, 'Minipit-Pit', 1, 0, 381, 403
+);
+
+/* INSERT QUERY NO: 29 */
+INSERT INTO positions(map_id, PosName, bomb_id, Counter, posTop, posLeft)
+VALUES
+(
+2, 'A-Aps-2nd-door', 1, 0, 399, 310
+);
+
+/* INSERT QUERY NO: 30 */
+INSERT INTO positions(map_id, PosName, bomb_id, Counter, posTop, posLeft)
+VALUES
+(
+2, 'Coffins', 2, 4, 47, 231
+);
+
+/* INSERT QUERY NO: 31 */
+INSERT INTO positions(map_id, PosName, bomb_id, Counter, posTop, posLeft)
+VALUES
+(
+2, 'Coffins', 3, 3, 47, 231
+);
+
+/* INSERT QUERY NO: 32 */
+INSERT INTO positions(map_id, PosName, bomb_id, Counter, posTop, posLeft)
+VALUES
+(
+2, 'Coffins', 4, 2, 47, 231
+);
+
+/* INSERT QUERY NO: 33 */
+INSERT INTO positions(map_id, PosName, bomb_id, Counter, posTop, posLeft)
+VALUES
+(
+1, 'Windows ', 3, 2, 33, 188
+);
+
