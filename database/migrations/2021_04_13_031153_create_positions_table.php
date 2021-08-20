@@ -21,6 +21,8 @@ class CreatePositionsTable extends Migration
             $table->tinyInteger('counter');
             $table->integer('posTop');
             $table->integer('posLeft');
+            $table->timestamp('created_at')->nullable();
+            $table->timestamp('updated_at')->nullable();
         });
 
     }

@@ -1,7 +1,6 @@
 
+function fetchVideoBySteamIDAndMapID(steamId, MapID) {
 
-function fetchVideoBySteamIDAndMapID(user, MapID) {
-    let steamId = user.steam_id;
     var videoGrid = document.getElementById("video-grid");
     var divVideoListWrap = create("div", {
         id: "video-list-wrap",
@@ -9,11 +8,13 @@ function fetchVideoBySteamIDAndMapID(user, MapID) {
     var divVideoList = create("div", {
         className: "video-list",
     });
-    axios.get("/users/" + steamId + "/" + MapID)
+    var url = "/users/" + steamId + "/" + MapID;
+    axios.get(url)
     .then(function (response) {
         this.data = response.data;
-        console.log(response.data);
+     
         this.data.forEach(function (item) {
+            
             //--create wrapper for all --//
             var divVideoItem = create("div", {
                 className: "video-item",

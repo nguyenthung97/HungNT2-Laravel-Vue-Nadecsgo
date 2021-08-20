@@ -4,15 +4,20 @@ namespace Database\Seeders;
 
 use Illuminate\Database\Seeder;
 
-class VideoSeeder extends Seeder
+use Illuminate\Support\Facades\DB;
+use JeroenZwart\CsvSeeder\CsvSeeder;
+
+class VideoSeeder extends CsvSeeder
 {
-    /**
-     * Run the database seeds.
-     *
-     * @return void
-     */
+    public function __construct()
+    {
+        $this->file = '/database/csvs/video_nades.csv';
+        $this->tablename = 'videos';
+    }
+
     public function run()
     {
-        //
+        // runs the seeder - alternatively, you could call $this->runSeeder(); for the same result
+        parent::run();
     }
 }

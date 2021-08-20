@@ -15,7 +15,7 @@ class CreateCommentsTable extends Migration
     {
         Schema::create('comments', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('vid_id')->constrained('videos')->onDelete('cascade');
+            $table->unsignedBigInteger('vid_id');
             $table->longText('comment');
             $table->string('comment_sender_name');
             $table->string('comment_sender_avatar');

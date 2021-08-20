@@ -2,7 +2,7 @@
     <div id="sidebar-wrapper">
         <div id="discord-coffee">
             <div class="discord rounded-top" style="background-color: rgb(114,137,218)">
-            <a href="#" style="text-decoration:none">
+            <a href="https://discord.gg/010h0KFCBNASyMUKv" style="text-decoration:none">
                 <div class="action">
                     <div class="discord-message" style="font: size 16px;">Join us on 
                     <span style="font-weight:500">Discord</span>

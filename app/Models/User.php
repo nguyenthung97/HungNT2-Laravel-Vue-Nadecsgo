@@ -23,7 +23,7 @@ class User extends Authenticatable
     protected $fillable = [
         'steam_id',
         'avatar',
-        'name'
+      
     ];
 
     /**
@@ -42,7 +42,8 @@ class User extends Authenticatable
         'role',
         'remember_token',
         'bio',
-        'last_seen'
+        'last_seen',
+        'name'
     ];
 
     public function videos(){

@@ -34,7 +34,7 @@
         @include('includes.header')
         @include('includes.mapnav')
         <main>
-            <div class="guidelines-wrapper" style="color:rgb(66,66,66); margin: 16px">
+            <div class="guidelines-wrapper" style="color:rgb(66,66,66); margin: 10px">
                 <h2>Guidelines</h2>
                 <div class="rules">
                     <div class="req">

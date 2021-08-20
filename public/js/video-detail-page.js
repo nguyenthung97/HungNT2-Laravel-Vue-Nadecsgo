@@ -9,6 +9,7 @@ function displayIframe(videoID) {
     axios.get("/getDetail/" + videoID).then(function (response) {
         this.data = response.data;
         this.data.forEach(function (item) {
+
             iframe.setAttribute(
                 "src",
                 getIframeLink(item.VideoPath) + "?controls=0&&speed=2"
@@ -58,7 +59,7 @@ function displayLineUpImage(videoID) {
         "style",
         "display: block; overflow: hidden; position: absolute; inset: 0px; box-sizing: border-box; margin: 0px;"
     );
-    var imgLineUp = create("img");
+    var imgLineUp = create("img",{className:'video-lineup-img'});
     axios.get("/getDetail/" + videoID).then(function (response) {
         this.data = response.data;
         this.data.forEach(function (item) {
@@ -115,11 +116,9 @@ function displayComment(videoID) {
     var divCommentBodyWrapper = create("div", {
         className: "comment-body-wrapper",
     });
-    axios.get("/getDetail/" + videoID).then(function (response) {
+    axios.get("/getCommentByVideoId/" + videoID).then(function (response) {
         this.data = response.data;
         this.data.forEach(function (item) {
-            console.log(item);
-
             imgCommentAvatar.setAttribute("src", item.comment_sender_avatar);
 
             var divCommentNickName = create("div");
@@ -143,6 +142,9 @@ function displayComment(videoID) {
             ac(divCommentBody, pCommentBody);
             ac(divCommentBodyWrapper, divCommentBody);
         });
+        if(response.data == ''){
+            divDisplayComment.setAttribute('style','display:none');
+        }
     });
     ac(divCommentWrapper, imgCommentAvatar);
     ac(divCommentWrapper, divCommentNicknameWrapper);

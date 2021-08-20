@@ -25,8 +25,9 @@
     </style>
 </head>
 
-<body onload="fetchVideoBySteamIDAndMapID({{$user}},1)">
+<body onload="fetchVideoBySteamIDAndMapID('{{$user->steam_id}}',2)">
     <div id="page">
+        
         @include('includes.header')
         @include('includes.mapnav')
         <main>
@@ -41,7 +42,7 @@
                             <span style="font-weight: 200; font-size:16px">Member since: &nbsp; &nbsp;{{$user->created_at->format('M d.Y')}}</span>
                             <br>
                             
-                            <span style="font-weight: 200; font-size:16px">Last active: &nbsp; &nbsp;{{\Carbon\Carbon::parse($user->last_seen)->format('M d.Y H:i:s')}}</span>
+                            <span style="font-weight: 200; font-size:16px">Last active: &nbsp; &nbsp;{{\Carbon\Carbon::parse($user->last_seen)->format('M d.Y H:i')}}</span>
                            
                         </div>
                         <br>
@@ -57,7 +58,7 @@
                     <h2>Nades by {{$user->name}}</h2>
                     <div class="user-nade-map-nav">
                         @foreach ($maps as $map)
-                        <button class="user-map-nav-item" onclick="fetchVideoBySteamIDAndMapID({{$user}},{{$map->id}})">
+                        <button class="user-map-nav-item" onclick="fetchVideoBySteamIDAndMapID('{{$user->steam_id}}',{{$map->id}})">
                             <span class="nav-icon">
                                 <div style="display:block;overflow:hidden;position:absolute;top:-5px;left:0;bottom:0;right:0;box-sizing:border-box;margin:0">
                                     <img src="../maps-icons/{{ strtolower($map->MapName)}}.png" width="20" height="20">
@@ -81,3 +82,6 @@
 <script src="{{ asset('/js/user-detail-page.js') }}"></script>
 
 </html>
+<script>
+    
+</script>

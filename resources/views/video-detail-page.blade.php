@@ -13,7 +13,7 @@
     <link rel="stylesheet" href="/css/secondary-pages-css.css">
     <link href="{{ asset('/css/video-detail-page.css') }}" rel="stylesheet">
     <script src="{{ asset('/js/app.js') }}"></script>
-    <script src="{{ asset('/js/video-detail-page.js')}}"></script>
+<script src="{{ asset('/js/video-detail-page.js')}}"></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.min.css" rel="stylesheet">
 
     <!-- Styles -->
@@ -39,18 +39,40 @@
                 </a>
                 <span style="font-size: 1.5em; color:black">{{$video->fullDetailedVideoName}}</span>
                 <div class="d-flex ml-auto flex-row">
+
                     <div class="p-2">
                         <button class="btn border-secondary" onclick="darkModeTrigger()">
                             <i class="fas fa-moon"></i>
                         </button>
                     </div>
 
+                    @guest
                     <div class="p-2">
-                        <button class="btn btn-primary">
-                            <i class="fab fa-steam"></i>
-                            Sign in with <strong>STEAM</strong>
-                        </button>
+                        <a href="/login">
+                            <button class="btn btn-primary">
+                                <i class="fab fa-steam"></i>
+                                Sign in with <strong>STEAM</strong>
+                            </button>
+                        </a>
                     </div>
+                    @else
+                    <div class="p-2">
+                        <div class="drop-down">
+                            <button type="button" class="dropdown-toggle button" style="outline:none; border:none; background:transparent" data-toggle="dropdown">
+                                <img  src="{{Auth::user()->avatar}}" alt="avatar for {{Auth::user()->name}}" class="user-avatar">
+                                <span class="pr-1 text-dark">{{Auth::user()->name}}</span>
+                            </button>
+                            <div>
+                                <ul class="dropdown-menu dropdown-menu-right">
+                                    <li><a class="dropdown-item" href="../createnade">Add Nades</a></li>
+                                    <li><a class="dropdown-item" href="../users/{{Auth::user()->steam_id}}">Profile</a></li>
+                                    <li><a class="dropdown-item" href="{{ url('/logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();"> Sign Out </a></li>
+                                </ul>
+                                <form id="logout-form" action="{{ url('/logout') }}" method="POST" style="display: none;">{{ csrf_field() }} </form>
+                            </div>
+                        </div>
+                    </div>
+                    @endguest
                 </div>
             </nav>
         </header>
@@ -93,15 +115,15 @@
             </div>
             <div class="comments" style="border-radius: 8px; background: white; border:none; margin-top: 16px; padding: 10px;">
                 <form action="/add-comment" method="POST" id="comment_form">
-                @csrf
+                    @csrf
                     <div class="form-group" style="display:flex; flex-direction:column">
                         <textarea name="comment_message" placeholder="Write a comment. It's a person on the other side, don't be too mean!"></textarea>
                         <button type="submit" id="submit-btn">SUBMIT</button>
-                        @if(Auth::check())
+                        @auth
                         <input type="hidden" name="comment_sender_name" value={{Auth::user()->name}}>
                         <input type="hidden" name="comment_sender_avatar" value={{Auth::user()->avatar}}>
                         <input type="hidden" name="video_id" value={{$video->id}}>
-                        @endif
+                        @endauth
                     </div>
                 </form>
             </div>

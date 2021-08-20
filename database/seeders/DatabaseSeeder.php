@@ -2,9 +2,11 @@
 
 namespace Database\Seeders;
 use Database\Seeders\MapSeeder;
+use Illuminate\Database\Seeder;
+use Database\Seeders\UserSeeder;
+use Database\Seeders\VideoSeeder;
 use Database\Seeders\BombDefSeeder;
 use Database\Seeders\PositionSeeder;
-use Illuminate\Database\Seeder;
 
 class DatabaseSeeder extends Seeder
 {
@@ -19,6 +21,8 @@ class DatabaseSeeder extends Seeder
             MapSeeder::class,
             BombDefSeeder::class,
             PositionSeeder::class,
+            UserSeeder::class,
+            VideoSeeder::class
         ]);
     }
 }

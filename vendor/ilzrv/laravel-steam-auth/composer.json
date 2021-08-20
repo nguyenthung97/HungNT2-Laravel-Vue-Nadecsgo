@@ -1,0 +1,27 @@
+{
+    "name": "ilzrv/laravel-steam-auth",
+    "description": "Steam Auth for Laravel",
+    "require": {
+        "php": "^7.2|^8.0",
+        "illuminate/http": "^7.0|^8.0"
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Ilia Lazarev",
+            "email": "me@ilzrv.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Ilzrv\\LaravelSteamAuth\\": "src"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Ilzrv\\LaravelSteamAuth\\ServiceProvider"
+            ]
+        }
+    }
+}

@@ -151,7 +151,7 @@ span {
     transition: transform 0.3s ease 0s;
 }
 
-img {
+.video-lineup-img {
     position: absolute;
     inset: 0px;
     box-sizing: border-box;

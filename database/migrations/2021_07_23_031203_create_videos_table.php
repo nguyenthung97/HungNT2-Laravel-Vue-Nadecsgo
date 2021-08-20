@@ -16,16 +16,18 @@ class CreateVideosTable extends Migration
         Schema::create('videos', function (Blueprint $table) {
             $table->id();
             $table->string('VideoName');
-            $table->foreignId('pos_id')->constrained('positions')->onDelete('cascade');
+            $table->unsignedBigInteger('pos_id');
             $table->string('VideoPath');
             $table->longtext('ResultImagePath');
             $table->longtext('LineUpImagePath');
-            $table->string('views');
-            $table->integer('favorites');
+            $table->string('views')->nullable();
+            $table->integer('favorites')->nullable();
             $table->string('fullDetailedVideoName');
             $table->string('slug');
             $table->unsignedBigInteger('steam_id')->nullable();
-            $table->foreign('steam_id')->references('steam_id')->on('users')->onDelete('cascade');
+            $table->timestamp('created_at')->nullable();
+            $table->timestamp('updated_at')->nullable();
+            // $table->foreign('steam_id')->references('steam_id')->on('users')->onDelete('cascade');
         });
     }
 

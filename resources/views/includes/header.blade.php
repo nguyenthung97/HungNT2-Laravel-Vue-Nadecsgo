@@ -23,9 +23,9 @@
       @else
       <div class="p-2">
         <div class="drop-down">
-          <button type="button" class="dropdown-toggle button" style="outline:none; border:none; background:transparent" data-toggle="dropdown">
+          <button type="button" class="dropdown-toggle button p-0" style="outline:none; border:none; background:transparent" data-toggle="dropdown">
             <img src="{{Auth::user()->avatar}}" alt="avatar for {{Auth::user()->name}}" class="user-avatar">
-            <span class="pr-1">{{Auth::user()->name}}</span>
+            <span class="pr-1 text-dark">{{Auth::user()->name}}</span>
           </button>
           <div>
             <ul class="dropdown-menu dropdown-menu-right">

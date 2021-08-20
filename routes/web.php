@@ -63,6 +63,8 @@ Route::get('nades/{slug}',[VideosController::class,'showVideoDetailPage']);
 
 Route::get('/getDetail/{videoID}',[VideosController::class,'getVideoDetail']);
 
+Route::get('/getCommentByVideoId/{videoID}',[VideosController::class,'getCommentDetailByVideoID']);
+
 Route::get('login', [SteamAuthController::class, 'login']);
 
 Route::post('/add-comment',[CommentController::class,'addComment']);
