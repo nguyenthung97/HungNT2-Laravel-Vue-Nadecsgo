@@ -219,10 +219,10 @@ textarea{
 .comment-avatar{
     position: relative;
     grid-area: avatar;
-    width: 30px;
-    height: 30px;
+    width: 60px;
+    height: 60px;
     border-radius: 50%;
-    margin-right: 12px;
+    
     margin-top: 8px;
 }
 
@@ -246,4 +246,10 @@ textarea{
     border-bottom-left-radius: 8px;
     background: rgb(255, 255, 255);
     border: 1px solid rgba(0,0,0,0.1); 
+}
+
+.user-avatar-img{
+    border-radius: 50%;
+    margin: 0;
+    padding:0;
 }

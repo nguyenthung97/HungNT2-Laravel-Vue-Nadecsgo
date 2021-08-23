@@ -104,6 +104,7 @@
                     </div>
                 </div>
             </div>
+            
             <div id="description" style="border-radius: 8px; background: white; border: none; margin-top:16px; padding: 10px">
                 <h3 style="font-size:22px">Description</h3>
                 <hr>
@@ -130,6 +131,13 @@
             <br>
             <div id="display_comment"></div>
         </main>
+        <div class="user" style="display: flex; grid-area: user; flex-direction: column">
+                <div class="user-avatar">
+                    <a href="/users/{{$video->steam_id}}">
+                        <img src="{{$video->avatar}}" class="user-avatar-img">
+                    </a>
+                </div>
+            </div>
     </div>
 </body>
 

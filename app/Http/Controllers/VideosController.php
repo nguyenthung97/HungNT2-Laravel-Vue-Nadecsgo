@@ -18,7 +18,10 @@ class VideosController extends Controller
     }
 
     public function showVideoDetailPage($slug){
-        $video = Video::where('slug',$slug)->get()->first();
+        $video = Video::where('slug',$slug)
+        ->join('users', 'videos.steam_id','users.steam_id')
+        ->get()->first();
+        
         return View::make('video-detail-page')->with(compact('video'));
         // return response()->json($video);
     }
