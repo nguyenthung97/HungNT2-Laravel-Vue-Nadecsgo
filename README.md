@@ -51,20 +51,20 @@ Developer muốn thực hiện chỉnh sửa các tính năng, có thể tìm th
 
 ## Hướng dẫn sử dụng trang web ( với người dùng cá nhân ) 
 
-Chúng tôi cung cấp một và chỉ một phương thức đăng nhập, đó là thông qua Steam 
+Chúng tôi cung cấp một và chỉ một phương thức đăng nhập, đó là thông qua Steam\
 ![signin](/public/exampleimg/signinwithsteam.png)
 
-Người dùng có thể xem chi tiết các video do mình đăng tải, thêm mới video
+Người dùng có thể xem chi tiết các video do mình đăng tải, thêm mới video\
 ![siginfunction](/public/exampleimg/signinfunction.png)
 
-Người dùng có thể tìm kiếm thông tin qua các đường dẫn các bản đồ
+Người dùng có thể tìm kiếm thông tin qua các đường dẫn các bản đồ\
 ![maplist](/public/exampleimg/maplist.png)
 
-Người dùng có thể lọc thông tin theo loại bomb
+Người dùng có thể lọc thông tin theo loại bomb\
 ![bombtype](/public/exampleimg/bombtype.png)
 
-Chọn từng SVG render ra video tương ứng vị trí đó
+Chọn từng SVG render ra video tương ứng vị trí đó\
 ![svg](/public/exampleimg/svgexample.png)
 
-Chọn từng video render ra trang video chi tiết tương ứng 
+Chọn từng video render ra trang video chi tiết tương ứng\
 ![video](/public/exampleimg/videoexample.png)
