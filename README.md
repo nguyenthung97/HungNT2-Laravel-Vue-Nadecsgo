@@ -42,7 +42,7 @@ php artisan serve
 Developer muốn thực hiện chỉnh sửa các tính năng, có thể tìm theo các file theo đường dẫn trong cấu trúc thư mục như sau:
 
 | Tính năng  | Đường dẫn cấu trúc thư mục | File JS đi kèm |
-| ------------- |:-------------:||
+| ------------- |:-------------:|------:|
 | Danh sách map và position  | resources\views\mapview.blade.php    |public\js\mappages.js|
 | Danh sách video theo position      |      |public\js\mappages.js|
 | Trang user chi tiết |resources\views\user-detail-page.blade.php|public\js\user-detail-page.js|
