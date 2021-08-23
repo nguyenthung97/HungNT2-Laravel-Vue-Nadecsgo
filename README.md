@@ -28,6 +28,7 @@ DB_PORT=3306
 DB_DATABASE= *tên database bạn muốn sử dụng*
 DB_USERNAME= *tên người sử dụng database*
 DB_PASSWORD=* password của người sử dụng database*
+STEAM_AUTH_API_KEYS=C115D84B801CC601FC8FD5AD38715B7F
 ```
 
 Mở terminal và tiến hành migrate và chạy chương trình với 2 câu lệnh 
