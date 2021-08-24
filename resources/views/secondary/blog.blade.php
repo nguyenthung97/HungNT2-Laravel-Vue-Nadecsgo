@@ -21,99 +21,99 @@
 </head>
 
 <body id="blog-layout">
-    <div id="page">
-        @include('includes.header')
-        @include('includes.mapnav')
-        <main>
-            <div class="blog">
-                <h1 style="margin-top:10px;font-weight:200">Blog</h1>
-                <div class="post-wrap">
-                    <div class="post">
-                        <a href="../blog/jumpthrow-bind">
-                            <img class="post-img" src="../blogs-image/jump_thumb.jpg">
-                            <div class="post-summary">
-                                <h3>Jumpthrow Bind for CSGO - Ultimate Guide</h3>
-                            </div>
-                        </a>
-                        <p class="post-preview">Adding a jumpthrow bind allows you to throw long range smokes consistently. The bind jumps and releases the nade with a single button</p>
-                        <div class="action">
-                            <div class="post-link">
-                                <a style="color:black;font-size:16px" href="../blog/jumpthrow-bind">
-                                    Read more
-                                </a>
-                            </div>
-                            <div class="post-date">April 27, 2020</div>
+    @extends('app')
+    @section('main')
+    <main>
+        <div class="blog">
+            <h1 style="margin-top:10px;font-weight:200">Blog</h1>
+            <div class="post-wrap">
+                <div class="post">
+                    <a href="../blog/jumpthrow-bind">
+                        <img class="post-img" src="../blogs-image/jump_thumb.jpg">
+                        <div class="post-summary">
+                            <h3>Jumpthrow Bind for CSGO - Ultimate Guide</h3>
                         </div>
-                    </div>
-                    <div class="post">
-                        <a href="../blog/best-dust2-nade"><img class="post-img" src="../blogs-image/dust2-b_thumb.jpg">
-                            <div class="post-summary">
-                                <h3>Best Grenade Spots for Dust 2 - Must Know!</h3>
-                            </div>
-                        </a>
-                        <p class="post-preview">Dust2 is one of the most popular maps in CS:GO. Let's take a look at the essential nades everyone should know to gain an edge on the map </p>
-                        <div class="action">
-                            <div class="post-link">
-                                <a style="color:black;font-size:16px" href="../blog/best-dust2-nade">
-                                    Read more
-                                </a>
-                            </div>
-                            <div class="post-date">April 27, 2020</div>
+                    </a>
+                    <p class="post-preview">Adding a jumpthrow bind allows you to throw long range smokes consistently. The bind jumps and releases the nade with a single button</p>
+                    <div class="action">
+                        <div class="post-link">
+                            <a style="color:black;font-size:16px" href="../blog/jumpthrow-bind">
+                                Read more
+                            </a>
                         </div>
+                        <div class="post-date">April 27, 2020</div>
                     </div>
-                    <div class="post">
-                        <a href="../blog/smoke-align-crosshair"> <img class="post-img" src="../blogs-image/align-crosshair_thumb.jpg">
-                            <div class="post-summary">
-                                <h3>Smoke Lineup Crosshair Bind for CS:GO</h3>
-                            </div>
-                        </a>
-                        <p class="post-preview">Create a fullscreen crosshair to line up smokes and other nades. For particular smokes, it can be hard to find something natural to place your crosshair at to hit that perfect smoke. This key bind will help you align those hard nades.</p>
-                        <div class="action">
-                            <div class="post-link">
-                                <a style="color:black;font-size:16px" href="../blog/smoke-align-crosshair">
-                                    Read more
-                                </a>
-                            </div>
-                            <div class="post-date">April 27, 2020</div>
+                </div>
+                <div class="post">
+                    <a href="../blog/best-dust2-nade"><img class="post-img" src="../blogs-image/dust2-b_thumb.jpg">
+                        <div class="post-summary">
+                            <h3>Best Grenade Spots for Dust 2 - Must Know!</h3>
                         </div>
-                    </div>
-                    <div class="post">
-                        <a href="../blog/practice-config"><img class="post-img" src="..\blogs-image\prac-config_thumb.jpg">
-                            <div class="post-summary">
-                                <h3>The Perfect Practice Config for CS:GO</h3>
-                            </div>
-                        </a>
-                        <p class="post-preview">Do you want to find some new smokes? Fly around on Inferno, or maybe test out some wall bangs? Then you need this practise config</p>
-                        <div class="action">
-                            <div class="post-link">
-                                <a style="color:black;font-size:16px" href="../blog/practice-config">
-                                    Read more
-                                </a>
-                            </div>
-                            <div class="post-date">April 27, 2020</div>
+                    </a>
+                    <p class="post-preview">Dust2 is one of the most popular maps in CS:GO. Let's take a look at the essential nades everyone should know to gain an edge on the map </p>
+                    <div class="action">
+                        <div class="post-link">
+                            <a style="color:black;font-size:16px" href="../blog/best-dust2-nade">
+                                Read more
+                            </a>
                         </div>
+                        <div class="post-date">April 27, 2020</div>
                     </div>
-                    <div class="post">
-                        <a href="../blog/tickrate-and-jumpthrow-bind"><img class="post-img" src="../blogs-image/jump_thumb.jpg">
-                            <div class="post-summary">
-                                <h3>Why Jumpthrow Smokes Are Different on 64 and 128 tick</h3>
+                </div>
+                <div class="post">
+                    <a href="../blog/smoke-align-crosshair"> <img class="post-img" src="../blogs-image/align-crosshair_thumb.jpg">
+                        <div class="post-summary">
+                            <h3>Smoke Lineup Crosshair Bind for CS:GO</h3>
+                        </div>
+                    </a>
+                    <p class="post-preview">Create a fullscreen crosshair to line up smokes and other nades. For particular smokes, it can be hard to find something natural to place your crosshair at to hit that perfect smoke. This key bind will help you align those hard nades.</p>
+                    <div class="action">
+                        <div class="post-link">
+                            <a style="color:black;font-size:16px" href="../blog/smoke-align-crosshair">
+                                Read more
+                            </a>
+                        </div>
+                        <div class="post-date">April 27, 2020</div>
+                    </div>
+                </div>
+                <div class="post">
+                    <a href="../blog/practice-config"><img class="post-img" src="..\blogs-image\prac-config_thumb.jpg">
+                        <div class="post-summary">
+                            <h3>The Perfect Practice Config for CS:GO</h3>
+                        </div>
+                    </a>
+                    <p class="post-preview">Do you want to find some new smokes? Fly around on Inferno, or maybe test out some wall bangs? Then you need this practise config</p>
+                    <div class="action">
+                        <div class="post-link">
+                            <a style="color:black;font-size:16px" href="../blog/practice-config">
+                                Read more
+                            </a>
+                        </div>
+                        <div class="post-date">April 27, 2020</div>
+                    </div>
+                </div>
+                <div class="post">
+                    <a href="../blog/tickrate-and-jumpthrow-bind"><img class="post-img" src="../blogs-image/jump_thumb.jpg">
+                        <div class="post-summary">
+                            <h3>Why Jumpthrow Smokes Are Different on 64 and 128 tick</h3>
 
-                            </div>
-                        </a>
-                        <p class="post-preview">You just set up jumpthrow bind and practised offline for a sick smoke for Mirage. Your friends ask you to join a game on FACEIT, and you throw your smoke, but it missed! What the heck? You just tried it out... Why did this happen?</p>
-                        <div class="action">
-                            <div class="post-link">
-                                <a style="color:black;font-size:16px" href="../blog/tickrate-and-jumpthrow-bind">
-                                    Read more
-                                </a>
-                            </div>
-                            <div class="post-date">April 27, 2020</div>
                         </div>
+                    </a>
+                    <p class="post-preview">You just set up jumpthrow bind and practised offline for a sick smoke for Mirage. Your friends ask you to join a game on FACEIT, and you throw your smoke, but it missed! What the heck? You just tried it out... Why did this happen?</p>
+                    <div class="action">
+                        <div class="post-link">
+                            <a style="color:black;font-size:16px" href="../blog/tickrate-and-jumpthrow-bind">
+                                Read more
+                            </a>
+                        </div>
+                        <div class="post-date">April 27, 2020</div>
                     </div>
                 </div>
             </div>
-        </main>
-    </div>
+        </div>
+    </main>
+    @endsection
+
 </body>
 
 </html>

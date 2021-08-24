@@ -28,6 +28,7 @@ DB_PORT=3306
 DB_DATABASE= *tên database bạn muốn sử dụng*
 DB_USERNAME= *tên người sử dụng database*
 DB_PASSWORD=* password của người sử dụng database*
+STEAM_AUTH_API_KEYS=C115D84B801CC601FC8FD5AD38715B7F
 ```
 
 Mở terminal và tiến hành migrate và chạy chương trình với 2 câu lệnh 
@@ -42,7 +43,7 @@ php artisan serve
 Developer muốn thực hiện chỉnh sửa các tính năng, có thể tìm theo các file theo đường dẫn trong cấu trúc thư mục như sau:
 
 | Tính năng  | Đường dẫn cấu trúc thư mục | File JS đi kèm |
-| ------------- |:-------------:||
+| ------------- |:-------------:|-------:|
 | Danh sách map và position  | resources\views\mapview.blade.php    |public\js\mappages.js|
 | Danh sách video theo position      |      |public\js\mappages.js|
 | Trang user chi tiết |resources\views\user-detail-page.blade.php|public\js\user-detail-page.js|
@@ -51,20 +52,20 @@ Developer muốn thực hiện chỉnh sửa các tính năng, có thể tìm th
 
 ## Hướng dẫn sử dụng trang web ( với người dùng cá nhân ) 
 
-Chúng tôi cung cấp một và chỉ một phương thức đăng nhập, đó là thông qua Steam 
+Chúng tôi cung cấp một và chỉ một phương thức đăng nhập, đó là thông qua Steam\ 
 !(/public/exampleimg/signinwithsteam.png)
 
-Người dùng có thể xem chi tiết các video do mình đăng tải, thêm mới video
+Người dùng có thể xem chi tiết các video do mình đăng tải, thêm mới video\
 !(/public/exampleimg/signinfunction.png)
 
-Người dùng có thể tìm kiếm thông tin qua các đường dẫn các bản đồ
+Người dùng có thể tìm kiếm thông tin qua các đường dẫn các bản đồ\
 !(/public/exampleimg/maplist.png)
 
-Người dùng có thể lọc thông tin theo loại bomb
+Người dùng có thể lọc thông tin theo loại bomb\
 !(/public/exampleimg/bombtype.png)
 
-Chọn từng SVG render ra video tương ứng vị trí đó
+Chọn từng SVG render ra video tương ứng vị trí đó\
 !(/public/exampleimg/svgexample.png)
 
-Chọn từng video render ra trang video chi tiết tương ứng 
+Chọn từng video render ra trang video chi tiết tương ứng\
 !(/public/exampleimg/videoexample.png)

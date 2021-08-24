@@ -6,10 +6,10 @@ function fetchPosByMapNameAndBombId(MapName,BombID) {
     axios.get('/getPos/'+MapName +"/"+BombID)
         .then(function (response) {
             this.data = response.data
+            
             this.data.forEach(function (item) {
                 if (item.bomb_id == 1) {
                     var divSmoke = create("div", { className: item.BombName });
-
                     divSmoke.style.position = 'absolute';
                     divSmoke.style.cursor = 'pointer';
                     divSmoke.style.visibility = "visible";
@@ -466,7 +466,7 @@ function fetchVideoByPosID(PosID) {
                 ac(videoGrid, x);
 
 
-                // console.log(Object.keys(response.data).length); //ham dem so video  
+                console.log(Object.keys(response.data).length); //ham dem so video  
             });
 
         });
