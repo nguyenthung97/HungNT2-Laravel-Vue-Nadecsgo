@@ -14,13 +14,12 @@
     <link href="{{ asset('/css/video-grid.css') }}" rel="stylesheet">
     @endsection
     @section('js-libraries')
-    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
-    <script src="{{ asset('/js/user-detail-page.js') }}"></script>
+    <!-- <script src="{{ asset('/js/user-detail-page.js') }}"></script> -->
     @endsection
 
 </head>
 
-<body onload="fetchVideoBySteamIDAndMapID('{{$user->steam_id}}',2)">
+<body>
     @extends('app')
     @section('main')
     <main>
@@ -51,7 +50,7 @@
                 <h2>Nades by {{$user->name}}</h2>
                 <div class="user-nade-map-nav">
                     @foreach ($maps as $map)
-                    <button class="user-map-nav-item" onclick="fetchVideoBySteamIDAndMapID('{{$user->steam_id}}',{{$map->id}})">
+                    <button class="user-map-nav-item" @click=getChildVideos('{{$user->steam_id}}',{{$map->id}},'{{$map->MapName}}')>
                         <span class="nav-icon">
                             <div style="display:block;overflow:hidden;position:absolute;top:-5px;left:0;bottom:0;right:0;box-sizing:border-box;margin:0">
                                 <img src="../maps-icons/{{ strtolower($map->MapName)}}.png" width="20" height="20">
@@ -63,7 +62,11 @@
 
 
                 </div>
-                <div id="video-grid"></div>
+                <div id="video-grid">
+                    
+                    <user-detail ref="child" :steam-id="'{{$user->steam_id}}'" :user-name="'{{$user->name}}'"></user-detail>
+                   
+                </div>
             </div>
         </div>
     </main>

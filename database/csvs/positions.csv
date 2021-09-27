@@ -32,3 +32,4 @@ map_id,PosName,bomb_id,counter,posTop,posLeft
 2,Coffins,3,3,47,231
 2,Coffins,4,2,47,231
 1,Windows ,3,2,33,188
+1, Testing 1, 1, 0, 188, 237, , 

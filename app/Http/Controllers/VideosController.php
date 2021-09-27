@@ -45,6 +45,7 @@ class VideosController extends Controller
                 ->where('positions.map_id',$mapID)
                 ->join('maps','positions.map_id','maps.id')
                 ->join('bombs_defs','positions.bomb_id','bombs_defs.id')
+                ->select('videos.*','positions.map_id','positions.PosName','positions.bomb_id','positions.counter','positions.posTop','positions.posLeft','maps.MapName','bombs_defs.BombName')
                 ->get();
         return response()->json($videoSM);
     }

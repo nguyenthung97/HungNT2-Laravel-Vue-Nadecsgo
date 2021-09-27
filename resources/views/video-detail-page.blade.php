@@ -8,7 +8,7 @@
     <title>Laravel</title>
 
     <!-- Fonts -->
-    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    
     @section('style-libraries')
     <link rel="stylesheet" href="/css/secondary-pages-css.css">
     <link href="{{ asset('/css/video-detail-page.css') }}" rel="stylesheet">

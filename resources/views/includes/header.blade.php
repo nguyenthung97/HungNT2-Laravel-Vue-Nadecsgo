@@ -22,13 +22,13 @@
       </div>
       @else
       <div class="p-2">
-        <div class="drop-down">
-          <button type="button" class="dropdown-toggle button p-0" style="outline:none; border:none; background:transparent" data-toggle="dropdown">
-            <img src="{{Auth::user()->avatar}}" alt="avatar for {{Auth::user()->name}}" class="user-avatar">
+        <div class="dropdown">
+          <button type="button" class="dropdown-toggle btn p-0" style="outline:none; border:none; background:transparent" data-toggle="dropdown">
+            <img src="{{Auth::user()->avatar}}" alt="avatar for {{Auth::user()->name}}" style="align-self: center; width: 40px; height: 38px; border-radius: 50%; margin-right: 6px;">
             <span class="pr-1 text-dark">{{Auth::user()->name}}</span>
           </button>
           <div>
-            <ul class="dropdown-menu dropdown-menu-right">
+            <ul class="dropdown-menu">
               <li><a class="dropdown-item" href="../createnade">Add Nades</a></li>
               <li><a class="dropdown-item" href="../users/{{Auth::user()->steam_id}}">Profile</a></li>
               <li><a class="dropdown-item" href="{{ url('/logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();"> Sign Out </a></li>
