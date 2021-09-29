@@ -8,13 +8,13 @@
     <title>Laravel</title>
 
     <!-- Fonts -->
+
     @section('style-libraries')
     <link rel="stylesheet" href="/css/secondary-pages-css.css">
     <link href="{{ asset('/css/user-detail-page.css') }}" rel="stylesheet">
     <link href="{{ asset('/css/video-grid.css') }}" rel="stylesheet">
     @endsection
     @section('js-libraries')
-    <!-- <script src="{{ asset('/js/user-detail-page.js') }}"></script> -->
     @endsection
 
 </head>

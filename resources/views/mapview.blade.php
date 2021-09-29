@@ -26,7 +26,7 @@
     <main>
         <div id="nade-page">
             <!--filter -->
-            @include('includes.filter')
+            <nade-filter-component map-name={{$map->MapName}}></nade-filter-component>
             <!-- trang hien thi nade -->
             <div id="nade-nades" style="grid-area: nades; width:100%; margin-top: 10px; flex:1 1 auto">
 
@@ -73,7 +73,7 @@
 </html>
 
 <script type="text/javascript">
-    var map = <?php echo json_encode($map) ?>;
+    
     function printMousePos(event) {
         coordY = event.offsetY - 10;
         coordX = event.offsetX - 11;

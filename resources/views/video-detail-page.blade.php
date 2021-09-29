@@ -9,14 +9,11 @@
 
     <!-- Fonts -->
     
-    @section('style-libraries')
     <link rel="stylesheet" href="/css/secondary-pages-css.css">
     <link href="{{ asset('/css/video-detail-page.css') }}" rel="stylesheet">
-    @endsection
-    @section('js-libraries')
+    
     <script src="{{ asset('/js/video-detail-page.js')}}"></script>
-    @endsection
-  
+      
 </head>
 
 <body onload="displayIframe({{$video->id}}); displayComment({{$video->id}})">
@@ -32,7 +29,7 @@
                 <div class="d-flex ml-auto flex-row">
 
                     <div class="p-2">
-                        <button class="btn border-secondary" onclick="darkModeTrigger()">
+                        <button class="btn border-secondary">
                             <i class="fas fa-moon"></i>
                         </button>
                     </div>
@@ -89,6 +86,7 @@
                             <div class="selected-bg-fill"></div>
                         </div>
                         <button class="tab-video tab-btn selected" onclick="displayIframe({{$video->id}})">VIDEO</button>
+                        
                         <button class="tab-lineup tab-btn" onclick="displayLineUpImage({{$video->id}})">LINE UP</button>
                     </div>
                     <div class="media-container">

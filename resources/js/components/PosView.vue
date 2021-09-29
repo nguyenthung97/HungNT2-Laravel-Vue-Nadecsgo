@@ -38,6 +38,7 @@
 
 <script>
 import {EventBus} from "../EventBus";
+import {getPosByMapNameAndBombID} from "../helpers/getData.js"
 export default {
     data() {
         return {
@@ -50,19 +51,12 @@ export default {
 
     created(){
         this.getPosByMapNameAndBombID(this.mapName,1);
+        EventBus.$on("map-name-bomb-id", (mapname,bombid) => {
+            this.getPosByMapNameAndBombID(mapname,bombid);
+        })
     },
     methods: {
-        getPosByMapNameAndBombID: function (mapname, bombId) {
-            var url = "/getPos/" + mapname + "/" + bombId;
-            axios.get( url, { mapname: this.mapName, bombId: this.bombId })
-            .then( response => {
-                this.results = response.data;
-                console.log(this.results)
-                console.log(mapname);
-
-                }
-            );
-        },
+        getPosByMapNameAndBombID,
         getVideoByPosID: function(posId){
             EventBus.$emit("position-id", posId);
         },

@@ -109,7 +109,7 @@ export default {
         return {
             results: [],
             username : this.userName,
-            mapname : null,
+            mapname : 'Mirage',
             }
         },
     props: {
