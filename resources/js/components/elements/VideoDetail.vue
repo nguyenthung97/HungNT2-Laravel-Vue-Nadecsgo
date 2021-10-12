@@ -1,9 +1,6 @@
+
 <template>
-    <!-- <div>
-        <div>Day la thu ta can: {{ videoidcanlay}}</div>
-        <button @click="congVideoId">Cong 1</button>
-        <button @click="truVideoId">Tru 1</button>
-    </div> -->
+    
     <div id="video-lineup-wrapper">
         
         <div class="tab-selector">
@@ -77,41 +74,34 @@
 </template>
 
 <script>
-import { getIframeLink} from '../../helpers/getData'
+import { getIframeLink} from '../helpers/getData';
+import {EventBus} from "../EventBus";
 export default {
     data() {
         return {
             results: [],
             tabVideoSelected: true,    
-            videoidcanlay: null,
+            videoSlug: null,
         };
     },
     methods: {
-        getVideoDetail: function (videoId) {
-            var url = "/getDetail/" + videoId;
-            axios.get(url, { videoId: this.videoId }).then((response) => {
+        getVideoDetailBySlug: function (slug) {
+            var url = "/getDetailBySlug/" + slug;
+            axios.get(url, { slug: this.slug }).then((response) => {
                 this.results = response.data;
-                console.log(this.results)
             });
         },
         getIframeLink,
-        setVideoId(){
-            this.videoidcanlay = this.getvideoid;
-            console.log(this.videoidcanlay)
+        getCurrentSlug: function(){
+            var fullUrl = window.location.href;
+            var currentSlug = fullUrl.slice(32);
+            return this.videoSlug = currentSlug;
         }
     },
     created() {
-        console.log('Da vao')
-        // console.log(this.$store.getters.getVideoId);
-        this.setVideoId();
-        this.getVideoDetail(this.videoidcanlay);
+        this.getCurrentSlug();
+        this.getVideoDetailBySlug(this.videoSlug);
     },
-    computed: {
-        getvideoid() {
-            console.log(this.$store)
-            // return this.$store.state.videoidstate
-        },
-    }
 };
 </script>
 

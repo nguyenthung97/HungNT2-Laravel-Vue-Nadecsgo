@@ -10,7 +10,7 @@ class VideosController extends Controller
 {
     public function getVideosByPosID($posID){
         $videos = Video::where('pos_id',$posID)
-                ->select('videos.*','positions.*','bombs_defs.*')
+                ->select('videos.*','positions.map_id','positions.PosName','positions.counter','positions.posTop','positions.posLeft','bombs_defs.BombName')
                 ->join('positions','positions.id','videos.pos_id')
                 ->join('bombs_defs','positions.bomb_id','bombs_defs.id')
                 ->get();
@@ -30,6 +30,12 @@ class VideosController extends Controller
         $videoz = Video::where('videos.id',$videoID)
             ->get();
         return response()->json($videoz);
+    }
+
+    public function getVideoDetailBySlug($slug){
+        $videozzz = Video::where('slug',$slug)  
+        ->get();
+        return response()->json($videozzz);
     }
 
     public function getCommentDetailByVideoID($videoID){

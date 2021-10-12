@@ -37,8 +37,8 @@
 </template>
 
 <script>
-import {EventBus} from "../../EventBus";
-import {getPosByMapNameAndBombID} from "../../helpers/getData.js"
+import {EventBus} from "../EventBus";
+import {getPosByMapNameAndBombID} from "../helpers/getData.js"
 export default {
     data() {
         return {

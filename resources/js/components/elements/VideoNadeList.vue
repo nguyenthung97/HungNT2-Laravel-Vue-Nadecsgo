@@ -13,10 +13,10 @@
                     </div>
                     <div id="video-list-wrap">
                         <div class="video-list">
-                            <div class="video-item" v-for="(video,id) in videoResults" :key="video.id">
+                            <div class="video-item" v-for="(video,index) in videoResults" :key="video.index">
                                 <div class="nadebox-wrap">
                                     <div class="nade-box">
-                                        <a :href="'/nades/' + video.slug" @click="passVideoId(video.id)" target="_blank">
+                                        <a :href="'/nades/' + video.slug">
                                             <div class="title">
                                                 <h3 class="title-text">
                                                     <span class="main-title">
@@ -117,7 +117,7 @@
 </template>
 
 <script>
-import {EventBus} from "../../EventBus";
+import {EventBus} from "../EventBus";
 export default {
     data() {
         return {
@@ -134,23 +134,16 @@ export default {
         getVideoByPosID: function (posId) {
             var url = "/getVideos/" + posId;
             axios.get(url, { posId: this.posId }).then((response) => {
-                this.videoResults = response.data;   
+                this.videoResults = response.data;
                 this.gridActive = true;
             });
         },
         getIframeLink: function (link) {
             var linkGenerate = link.slice(0, 19) + "ifr" + link.slice(18);
-            return linkGenerate; 
+            return linkGenerate;
         },
-        passVideoId: function(videoId){
-           console.log('Video ID: ',videoId )
-           this.$store.dispatch('truyenVideoId', videoId).then(response => {
-               console.log(response)
-           })
-        }
     },
-    
 };
 </script>
 
-
+<style></style>
