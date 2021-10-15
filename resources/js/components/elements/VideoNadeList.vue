@@ -16,7 +16,7 @@
                             <div class="video-item" v-for="(video,index) in videoResults" :key="video.index">
                                 <div class="nadebox-wrap">
                                     <div class="nade-box">
-                                        <a :href="'/nades/' + video.slug">
+                                        <a :href="'/nades/' + video.slug" target="_blank">
                                             <div class="title">
                                                 <h3 class="title-text">
                                                     <span class="main-title">
@@ -142,6 +142,8 @@ export default {
             var linkGenerate = link.slice(0, 19) + "ifr" + link.slice(18);
             return linkGenerate;
         },
+        passVideoId: function(videoidtruyendi){   
+        }
     },
 };
 </script>

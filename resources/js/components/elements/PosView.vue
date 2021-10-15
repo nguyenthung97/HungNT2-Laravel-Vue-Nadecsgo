@@ -40,6 +40,7 @@
 import {EventBus} from "../EventBus";
 import {getPosByMapNameAndBombID} from "../helpers/getData.js"
 export default {
+    name: 'pos-view-component',
     data() {
         return {
             results: [],

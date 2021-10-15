@@ -146,6 +146,7 @@
 <script>
 import {EventBus} from "../EventBus";
 export default {
+    name:'nade-filter-component',
     data(){
         return{
             results: [],

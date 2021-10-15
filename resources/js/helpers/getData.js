@@ -13,3 +13,4 @@ export function getIframeLink(link) {
     var linkGenerate = link.slice(0, 19) + "ifr" + link.slice(18);
     return linkGenerate;
 }
+

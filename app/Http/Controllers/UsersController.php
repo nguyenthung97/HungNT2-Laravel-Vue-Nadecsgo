@@ -14,8 +14,8 @@ class UsersController extends Controller
                 ->get()
                 ->first();
         $maps = Map::all();
-        return view('user-detail-page',compact('user','maps'));
-        // return response()->json($maps);
+        // return view('user-detail-page',compact('user','maps'));
+        return response()->json($user);
         
     }
 }

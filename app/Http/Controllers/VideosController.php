@@ -22,7 +22,7 @@ class VideosController extends Controller
         ->join('users', 'videos.steam_id','users.steam_id')
         ->get()->first();
         
-        return View::make('video-detail-page')->with(compact('video'));
+        return response()->json($video);
         // return response()->json($video);
     }
 

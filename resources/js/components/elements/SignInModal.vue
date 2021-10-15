@@ -87,6 +87,7 @@
 
 <script>
 export default {
+    name: 'signin-modal-component',
     data() {
         return {
             showModal: false,

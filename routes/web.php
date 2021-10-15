@@ -22,36 +22,15 @@ use  App\Http\Controllers\Auth\SteamAuthController;
 
 Auth::routes();
 
-Route::get('/', function () {
-    return view('welcome');
-});
-Route::get('/blog', function () {
-    return view('secondary.blog');
-});
-    
-Route::prefix('/blog')->group(function(){
-    Route::get('/smoke-align-crosshair', function(){
-        return view('blogposts.smoke-align-crosshair');
-    });
-});
-
-Route::get('/about', function () {
-return view('secondary.about');
-});
-
-Route::get('/privacypolicy', function () {
-return view('secondary.privacy');
-});
-
-Route::get('/contact', function () {
-return view('secondary.contact');
+Route::get('{path}', function(){
+    return view('index',['auth_user' => Auth::user()]);
 });
 
 Route::get('/createnade',function () {
     return view('createnade');
 })->middleware(['web','auth']);
 
-Route::get('/maps/{mapName}',[MapsController::class,'index']);
+Route::get('/getMap/{mapName}',[MapsController::class,'index']);
 
 Route::get('/getVideos/{PosID}',[VideosController::class,'getVideosByPosID']);
 

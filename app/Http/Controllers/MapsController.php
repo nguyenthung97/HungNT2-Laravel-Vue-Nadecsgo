@@ -17,7 +17,7 @@ class MapsController extends Controller
     public function index($mapName){
         $map = Map::where('MapName','=',$mapName)->get()->first();
         
-        return View::make('mapview')->with(compact('map'));
+        return response()->json($map);
 
     }
 

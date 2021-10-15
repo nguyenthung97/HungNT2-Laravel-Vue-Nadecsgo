@@ -1,24 +1,26 @@
 <template>
-    <div>
+    <div class="LayoutDefault">
         <Header></Header>
         <MapNavigator></MapNavigator>
-        <NadeFilter></NadeFilter>
-        <Sidebar></Sidebar>
+        <main>
+            <slot>
+
+            </slot>
+        </main>
     </div>
 </template>
 
 <script>
-
-import Header from ''; 
-
+import Header from '~/components/common/Header.vue'; 
+import MapNavigator from '~/components/common/MapNavigator.vue'; 
 export default{
-    name: "MainLayout",
+    name: "LayoutDefault",
     middleware: ["auth"],
     components: {
         Header,
         MapNavigator,
-        NadeFilter,
-        Sidebar
+        // NadeFilter,
+        // Sidebar
     }
 }
 </script>
