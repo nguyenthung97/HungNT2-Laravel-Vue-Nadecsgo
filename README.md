@@ -42,13 +42,34 @@ php artisan serve
 
 Developer muốn thực hiện chỉnh sửa các tính năng, có thể tìm theo các file theo đường dẫn trong cấu trúc thư mục như sau:
 
-| Tính năng  | Đường dẫn cấu trúc thư mục | File JS đi kèm |
+| Tính năng  | Đường dẫn cấu trúc thư mục đến các trang | 
 | ------------- |:-------------:|-------:|
-| Danh sách map và position  | resources\views\mapview.blade.php    |public\js\mappages.js|
-| Danh sách video theo position      |      |public\js\mappages.js|
-| Trang user chi tiết |resources\views\user-detail-page.blade.php|public\js\user-detail-page.js|
-| Trang video chi tiết|resources\views\video-detail-page.blade.php|public\js\user-detail-page.js|
-| Trang tạo một position đi kèm video mới|resources\views\createnade.blade.php|public\js\createnadepages.js|
+| Danh sách map và position và video  | resources\js\pages\Map.vue 
+| Trang user chi tiết |resources\js\pages\UserDetail.vue |
+| Trang video chi tiết|resources\js\pages\VideoDetail.vue|
+| Trang tạo một position đi kèm video mới|resources\js\pages\CreateNade.vue|
+
+Ngoài ra, do sử dụng Vue, nên cấu trúc project cũng có sự thay đổi. Đó là việc sử dụng thêm layout, component thành phần, helpers, router.
+
+Đường dẫn đến chúng được trình bày ở dưới đây 
+```
+- Các component được sử dụng chung : resources\js\components\common
+- Các component thành phần lẻ : resources\js\components\elements
+- Layout(static layout): resources\js\layouts                            
+- Router : resources\js\router
+- Helper: resources\js\helpers
+```
+
+2 thành phần quan trọng nhất của bất kỳ project Vue nào 
+
+- app.js (được đặt tại resources\js\app.js) chịu trách nhiệm    
+    + thêm plugin 
+    + thêm library sử dụng
+    + khai báo toàn bộ layout sử dụng trong Project
+    + khai báo global các component lẻ thành phần
+- App.vue (được đặt tại resources\js\App.vue) chịu trách nhiệm
+    + quyết định layout sử dụng của từng template Vue (dynamic layout)
+   
 
 ## Hướng dẫn sử dụng trang web ( với người dùng cá nhân ) 
 
