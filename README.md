@@ -43,7 +43,7 @@ php artisan serve
 Developer muốn thực hiện chỉnh sửa các tính năng, có thể tìm theo các file theo đường dẫn trong cấu trúc thư mục như sau:
 
 | Tính năng  | Đường dẫn cấu trúc thư mục đến các trang | 
-| ------------- |:-------------:|-------:|
+| ------------- |:-------------:|
 | Danh sách map và position và video  | resources\js\pages\Map.vue 
 | Trang user chi tiết |resources\js\pages\UserDetail.vue |
 | Trang video chi tiết|resources\js\pages\VideoDetail.vue|
