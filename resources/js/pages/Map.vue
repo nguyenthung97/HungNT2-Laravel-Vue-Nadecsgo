@@ -1,52 +1,53 @@
 <template>
-    <layout-default>
+    <main>
         <div id="nade-page">
-            <nade-filter-component map-name="map.mapName"></nade-filter-component>
-            <div id="mapview-wrap">
-                    <signin-modal-component :is-guest="{{ json_encode(auth()->guest()) }}"></signin-modal-component>
-                    
+            <nade-filter-component
+                :map-name="$route.params.mapname"
+            ></nade-filter-component>
+            <div id="nade-nades" style="grid-area: nades; width:100%; margin-top: 10px; flex:1 1 auto">
+                <video-nade-list-component></video-nade-list-component>
+                <div id="mapview-wrap">
+                    <signin-modal-component></signin-modal-component>
                     <div id="mapview-absolute">
                         <div id="mapview-screen">
-                            <div id="map-view" style="position:relative;overflow:hidden">
-                                <img src="map.MapImagePath" style="border-radius:8px;max-width:100%; max-height:100%; display:block" id="mapoverlay" onclick="printMousePos(event)">
-                                <pos-view-component map-name="map.MapName"></pos-view-component>
+                            <div id="map-view" style="position: relative; overflow: hidden">
+                                <img :src="mapImagePath" style=" border-radius: 8px; max-width: 100%; max-height: 100%;display: block;" id="mapoverlay" onclick="printMousePos(event)"/>
+                                <pos-view-component :map-name="$route.params.mapname"></pos-view-component>
                             </div>
                         </div>
                     </div>
-
                 </div>
             </div>
         </div>
-    </layout-default>
+    </main>
 </template>
 <script>
-import NadeFilter from '~/components/elements/NadeFilter.vue';
-import SignInModal from '~/components/elements/SignInModal.vue';
-import PosView from '~/components/elements/PosView.vue';
-import LayoutDefault from '~/layouts/default.vue';
-
-export default{
-    data(){
-        return{
-            map: null,
-        }
+import NadeFilter from "~/components/elements/NadeFilter.vue";
+import SignInModal from "~/components/elements/SignInModal.vue";
+import PosView from "~/components/elements/PosView.vue";
+import LayoutDefault from "~/layouts/default.vue";
+export default {
+    data() {
+        return {
+        mapImagePath: null,
+        };
     },
     components: {
-        NadeFilter, 
+        NadeFilter,
         LayoutDefault,
         SignInModal,
-        PosView
+        PosView,
     },
     methods: {
-        getMapName: function(){
-            axios.get('/getMap/',this.$route.params.mapname)
-            .then(response => {
-                this.map = response.data;
-            })
-        }
+        getMap: function () {
+            var url = "/api/getMap/" + this.$route.params.mapname;
+            axios.get(url).then((response) => {
+                this.mapImagePath = response.data.MapImagePath;
+            });
+        },
     },
-    created(){
-        this.getMapName();
-    }
-}
+    mounted() {
+        this.getMap();
+    },
+};
 </script>

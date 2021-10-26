@@ -5,7 +5,7 @@
     - Chỉ render phần router view thôi
 -->
 
-<template>
+<!--<template>
     <transition name="fade" mode="out-in">
         <slot>
             <router-view></router-view>
@@ -17,4 +17,4 @@
 export default {
     name:'child'
 };
-</script>
+</script>-->

@@ -12,7 +12,7 @@ class Video extends Model
 
     protected $table = 'videos';
 
-    public $timestamps = false;
+    public $timestamps = true;
 
     public function position(){
         return $this->belongsTo(Position::class);

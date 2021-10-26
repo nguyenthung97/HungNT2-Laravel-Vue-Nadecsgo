@@ -16,7 +16,7 @@
                             <div class="video-item" v-for="(video,index) in videoResults" :key="video.index">
                                 <div class="nadebox-wrap">
                                     <div class="nade-box">
-                                        <a :href="'/nades/' + video.slug" target="_blank">
+                                        <a :href="'/nades/' + video.slug">
                                             <div class="title">
                                                 <h3 class="title-text">
                                                     <span class="main-title">
@@ -117,22 +117,24 @@
 </template>
 
 <script>
-import {EventBus} from "../EventBus";
+import {EventBus} from "~/EventBus.js";
 export default {
     data() {
         return {
-            videoResults: [],
+            videoResults: null,
             gridActive: false,
         };
     },
     created() {
+        
         EventBus.$on("position-id", data =>{
+            console.log('data')
             this.getVideoByPosID(data);
         });
     },
     methods: {
         getVideoByPosID: function (posId) {
-            var url = "/getVideos/" + posId;
+            var url = "/api/getVideos/" + posId;
             axios.get(url, { posId: this.posId }).then((response) => {
                 this.videoResults = response.data;
                 this.gridActive = true;
@@ -142,8 +144,6 @@ export default {
             var linkGenerate = link.slice(0, 19) + "ifr" + link.slice(18);
             return linkGenerate;
         },
-        passVideoId: function(videoidtruyendi){   
-        }
     },
 };
 </script>

@@ -12,9 +12,6 @@ class User extends Authenticatable
 
     protected $table = 'users';
     
-  
-    
-
     /**
      * The attributes that are mass assignable.
      *
@@ -23,7 +20,11 @@ class User extends Authenticatable
     protected $fillable = [
         'steam_id',
         'avatar',
-      
+        'last_seen',
+        'role',
+        'created_at',
+        'updated_at',
+        'name'
     ];
 
     /**
@@ -35,15 +36,9 @@ class User extends Authenticatable
         'password',
         'email',
         'password',
-        'avatar',
         'id',
-        'created_at',
-        'updated_at',
-        'role',
         'remember_token',
         'bio',
-        'last_seen',
-        'name'
     ];
 
     public function videos(){

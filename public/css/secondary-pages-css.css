@@ -9,7 +9,7 @@ body {
     min-width: 320px;
 }
 
-#page {
+#app {
     display: grid;
     width: 100%;
     min-height: 100vh;

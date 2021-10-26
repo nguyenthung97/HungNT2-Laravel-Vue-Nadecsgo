@@ -3,7 +3,7 @@
         id="add-nade-wrapper"
         style="position: absolute; top: 16px; right: 16px; z-index: 1"
     >
-        <div v-if="isGuest">
+        <div v-if="authUserSteamId == null">
             <button class="add-btn" @click="showModal = true">
                 <span style="font-size: 13px; font-weight: 700">Add Nade</span>
                 <i class="fas fa-plus" fill="green"></i>
@@ -72,7 +72,7 @@
                 </div>
             </transition>
         </div>
-        <div v-if="!isGuest">
+        <div v-else>
             <a href="../createnade">
                 <button class="add-btn">
                     <span style="font-size: 13px; font-weight: 700"
@@ -91,13 +91,11 @@ export default {
     data() {
         return {
             showModal: false,
+            authUserSteamId: null,
         };
     },
-    props: {
-        isGuest: {
-            type: Boolean,
-            default: true,
-        },
+    created() {
+        this.authUserSteamId = window.authUserSteamId
     },
 };
 </script>

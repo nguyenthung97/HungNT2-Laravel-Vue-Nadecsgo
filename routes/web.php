@@ -22,36 +22,10 @@ use  App\Http\Controllers\Auth\SteamAuthController;
 
 Auth::routes();
 
-Route::get('{path}', function(){
-    return view('index',['auth_user' => Auth::user()]);
-});
-
-Route::get('/createnade',function () {
-    return view('createnade');
-})->middleware(['web','auth']);
-
-Route::get('/getMap/{mapName}',[MapsController::class,'index']);
-
-Route::get('/getVideos/{PosID}',[VideosController::class,'getVideosByPosID']);
-
-Route::get('/getPos/{MapName}/{BombID}',[PositionsController::class,'getPosByMapNameAndBombId']);
-
-Route::post('/submit-nade',[PositionsController::class,'submitNade']);
-
-Route::get('nades/{slug}',[VideosController::class,'showVideoDetailPage']);
-
-Route::get('/getDetail/{videoID}',[VideosController::class,'getVideoDetail']);
-
-Route::get('/getDetailBySlug/{slug}',[VideosController::class,'getVideoDetailBySlug']);
-
-Route::get('/getCommentByVideoId/{videoID}',[VideosController::class,'getCommentDetailByVideoID']);
+Route::get('/{any}', function(){
+    return view('app');
+})->where('any','.*');
 
 Route::get('login', [SteamAuthController::class, 'login']);
-
-Route::post('/add-comment',[CommentController::class,'addComment']);
-
-Route::get('/users/{steamID}',[UsersController::class,'index']);
-
-Route::get('/users/{steamID}/{mapID}',[VideosController::class,'getVideosBySteamIDAndMapID']);
 
 Route::post('logout', [LoginController::class,'logout']);

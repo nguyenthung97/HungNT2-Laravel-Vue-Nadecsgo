@@ -12,7 +12,7 @@ class Position extends Model
     protected $table = 'positions';
 
 
-    public $timestamps = false;
+    public $timestamps = true;
 
     public function maps(){
         return $this->belongsTo(Map::class);

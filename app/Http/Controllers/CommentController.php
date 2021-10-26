@@ -8,10 +8,10 @@ class CommentController extends Controller
 {
     public function addComment(Request $request){
         $cmt = new Comment;
-        $cmt->vid_id = $request->video_id;
-        $cmt->comment = $request->comment_message;
-        $cmt->comment_sender_name = $request->comment_sender_name;
-        $cmt->comment_sender_avatar = $request->comment_sender_avatar;
+        $cmt->vid_id = $request->fields["videoId"];
+        $cmt->comment = $request->fields["message"];
+        $cmt->comment_sender_name = $request->fields["authUserName"];
+        $cmt->comment_sender_avatar = $request->fields["authUserAvatar"];
         $cmt->save();
         return back();
     }

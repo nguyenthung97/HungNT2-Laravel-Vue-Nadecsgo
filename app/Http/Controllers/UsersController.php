@@ -13,7 +13,6 @@ class UsersController extends Controller
         $user = User::where('users.steam_id',$steamID)
                 ->get()
                 ->first();
-        $maps = Map::all();
         // return view('user-detail-page',compact('user','maps'));
         return response()->json($user);
         

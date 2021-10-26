@@ -11,16 +11,17 @@ const path = require('path');
  |
  */
 
-mix.js('resources/js/app.js', 'public/js')
+mix.js('resources/js/app.js', 'public/js').vue()
     .sass('resources/sass/app.scss', 'public/css')
-    .sourceMaps();
+    .copyDirectory('resources/assets/image', 'public/image')
+    .sourceMaps(false);
 
 mix.webpackConfig({
     resolve: {
         extensions: [".js", ".json", ".vue"],
         alias: {
             "~": path.join(__dirname, "./resources/js"),
-           
+            "~assets": path.join(__dirname, "./resources/assets")
         }
     },
 });

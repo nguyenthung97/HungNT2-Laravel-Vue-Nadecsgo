@@ -37,8 +37,8 @@
 </template>
 
 <script>
-import {EventBus} from "../EventBus";
-import {getPosByMapNameAndBombID} from "../helpers/getData.js"
+import {EventBus} from "~/EventBus";
+import {getPosByMapNameAndBombID} from "~/helpers/getData.js"
 export default {
     name: 'pos-view-component',
     data() {
@@ -60,6 +60,7 @@ export default {
         getPosByMapNameAndBombID,
         getVideoByPosID: function(posId){
             EventBus.$emit("position-id", posId);
+            console.log('Đã truyền đi PosID: ' +posId)
         },
     },
 };

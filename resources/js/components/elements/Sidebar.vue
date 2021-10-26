@@ -31,7 +31,7 @@
         
         <div id="donator" style="padding: 16px; color: rgb(66, 66, 66); background: rgb(255, 255, 255); border-radius: 8px; margin-top: 16px">
             <h1 style="font-size: 17px; margin: 0px 0px 10px; padding: 0px;">
-                Find the best smokes, flashbangs, molotovs and grenades for {{$map->MapName}}.     
+                Find the best smokes, flashbangs, molotovs and grenades for {{map.MapName}}.     
             </h1>
             <h2 style="font-size: 14px; margin: 0px; padding: 0px;">
                 Don't be like BOT Bob, get some nades.
@@ -86,6 +86,7 @@
                      <a href="" class="contributor">
                        <img src="https://steamcdn-a.akamaihd.net/steamcommunity/public/images/avatars/16/16f88fe09fa83abb7caaa3b18661d7c978909516_medium.jpg" 
                        class="contributor-img">
+                    </a>
                 </div>        
             </div>
         </div>
@@ -97,6 +98,22 @@
 
 <script>
 export default {
-    name: 'sidebar-component'
+    name: 'sidebar-component',
+    data(){
+        return{
+            map: {},
+        }
+    },
+    methods: {
+       getMap: function () {
+            var url = "/api/getMap/" + this.$route.params.mapname;
+            axios.get(url).then((response) => {
+                this.map = response.data;
+            });
+        },
+    },
+    mounted(){
+        this.getMap();
+    }
 }
 </script>

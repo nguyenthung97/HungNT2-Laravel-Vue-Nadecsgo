@@ -21,5 +21,10 @@ class MapsController extends Controller
 
     }
 
+    public function getAllMap(){
+        $maps = Map::all();
+        return response()->json($maps);
+    }
+
 }
 
